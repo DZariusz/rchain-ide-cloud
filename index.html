@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <script type="text/javascript" src="page.js"></script>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <style type="text/css">
+  body {
+    padding: 10px;
+    margin: 0;
+    font: 11px/1.2 "Arial";
+  }
+  input,
+  textarea {
+    font: 11px/1.2 "Arial";
+  }
+  #ide-ack {
+    width: 75px;
+  }
+  input[type="number"] {
+    width: 45px;
+  }
+  textarea {
+    padding: 5px;
+    margin: 10px 0;
+  }
+  button {
+    margin: 5px;
+  }
+  </style>
+</head>
+<body>
+
+  <h1>RChain IDe Cloud.</h1>
+
+  <!-- TODO do I need more than one ack? -->
+  <label for="ide-ack">Name to listen on</label>
+  <input type="text" id="ide-ack" placeholder="Name to listen on">
+  <br>
+  <label for="ide-ack-last-blocks">Number of last block to grab messages from</label>
+  <input type="number" id="ide-ack-last-blocks" placeholder="Num of last blocks" value="1">
+  <br>
+  <label for="ide-ack-last-msgs">Total number of last messages to grab.</label>
+  <input type="number" id="ide-ack-last-msgs" placeholder="Num of last messages to grab" value="100">
+  <p>Note: messages are not in order, so we can't get "last"</p>
+  <br>
+  <button id="ide-listen">Listen</button>
+  <hr>
+  <textarea id="ide-code" placeholder="rholang code here" rows="20" cols="50"></textarea>
+  <br>
+  
+  <button id="ide-execute">Execute (deploy & propose)</button>
+  <button id="ide-deploy">Deploy</button>
+  <button id="ide-propose">Propose</button>
+
+
+</body>
+</html>
