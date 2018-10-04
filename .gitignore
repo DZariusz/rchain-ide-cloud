@@ -1,0 +1,5 @@
+node_modules
+rnode_local/rspace/*
+rnode_local/casper-block-store/*
+.idea/
+
